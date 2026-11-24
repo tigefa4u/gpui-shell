@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=GPUI Shell
+Comment=Native terminal built with GPUI
+Exec=gpui-shell
+Icon=gpui-shell
+Terminal=false
+Categories=System;TerminalEmulator;

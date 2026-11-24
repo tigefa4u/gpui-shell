@@ -2,6 +2,17 @@
 
 A single-window desktop terminal written in Rust. GPUI renders the native window and its root view. [gpui-terminal](https://docs.rs/gpui-terminal/0.1.0/gpui_terminal/) provides the Alacritty-backed terminal grid, ANSI colors, keyboard input, and scrollback. [portable-pty](https://docs.rs/portable-pty/0.9.0/portable_pty/) connects that view to an interactive local shell.
 
+## Linux AppImage
+
+Open [Build Linux AppImage](https://github.com/tigefa4u/gpui-shell/actions/workflows/appimage.yml), select a successful run, and download the **GPUI-Shell-linux-x86_64** artifact. Unzip the download and run:
+
+```sh
+chmod +x GPUI-Shell-x86_64.AppImage
+./GPUI-Shell-x86_64.AppImage
+```
+
+The package is built for x86-64 on Ubuntu 24.04. It uses the host desktop libraries and Vulkan driver; it does not require Rust. If you are missing runtime libraries on Ubuntu 24.04, install `libxkbcommon-x11-0 libwayland-client0 libwayland-cursor0 libvulkan1 mesa-vulkan-drivers fonts-dejavu-core fonts-dejavu-mono`. If FUSE is unavailable, run `./GPUI-Shell-x86_64.AppImage --appimage-extract-and-run` instead.
+
 ## Run from source
 
 Install Rust stable with Cargo and run this from the extracted project folder:
