@@ -12,3 +12,5 @@ portable-pty = "=0.9.0"
 
 [patch.crates-io]
 xattr = { path = "vendor/xattr" }
+# GPUI pins taffy =0.9.0; this copy permits the first patched grid release.
+taffy = { path = "vendor/taffy" }
